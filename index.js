@@ -6,6 +6,7 @@ const Restaurant = require('./models/restaurant')
 const Review = require('./models/review')
 
 app.use(express.urlencoded({extended: false}));
+app.use(express.json())
 
 //connect to mongodb
 mongoose.connect('mongodb://localhost/mongo-backend');
@@ -101,5 +102,5 @@ app.get('/restaurants/:id/reviews', (req, res) => {
 
 
 app.listen(3001, () => {
-    console.log('Up and running on 3000 🦞🦞🦞')
+    console.log('Up and running on 3001 🦞🦞🦞')
 })
